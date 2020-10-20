@@ -1,6 +1,6 @@
 <?php
 
-class Controllers
+class Controller
 {
 
   public function __construct()

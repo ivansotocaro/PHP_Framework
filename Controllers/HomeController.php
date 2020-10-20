@@ -1,6 +1,7 @@
 <?php
 
-class HomeController extends Controllers
+//All controllers extend from Controller
+class HomeController extends Controller
 {
   public function __construct()
   {
@@ -11,11 +12,5 @@ class HomeController extends Controllers
   {
     $this->view->getView("index");
    
-  }
-
-  public function carrito($numero)
-  {
-    $model = $this->model->carrito($numero);
-    echo $model;
   }
 }
