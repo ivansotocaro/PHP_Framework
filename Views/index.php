@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-  <h1>PAGIAN PRINCIPAL INDEX</h1>
-  
+  <h1>Vista Login </h1>
 </body>
 
 </html>

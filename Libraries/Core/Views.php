@@ -3,10 +3,12 @@
 class Views
 {
 
-  public function getView($view)
+  public function getView($view, $data = [])
   {
     $view = VIEWS . $view . ".php";
-    include $view;
+    if(file_exists($view)){
+        include $view;
+    }
   }
 }
 

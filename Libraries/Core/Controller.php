@@ -2,8 +2,16 @@
 
 class Controller
 {
+    /**
+     * @var Model
+     */
+    public $model;
+    /**
+     * @var Views
+     */
+    public $view;
 
-  public function __construct()
+    public function __construct()
   {
     $this->view = new Views();
     $this->loadModel();
@@ -15,8 +23,10 @@ class Controller
     $modelClass = "Models/" . $model . ".php";
 
     if (file_exists($modelClass)) {
+
       include $modelClass;
       $this->model = new $model();
+
     }
   }
 }

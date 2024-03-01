@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="<?= BASE_MEDIA?>css/main.css">
     <!-- Font-icon css// CDN-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   </head>
   <body class="app sidebar-mini">
 
@@ -85,7 +87,19 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item" href="dashboard"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li>
+            <a class="app-menu__item" href="dashboard">
+                <i class="app-menu__icon fa fa-dashboard"></i>
+                <span class="app-menu__label">Dashboard</span>
+            </a>
+        </li>
+
+        <li>
+            <a class="app-menu__item" href="user">
+                <i class="app-menu__icon fa fa-dashboard"></i>
+                <span class="app-menu__label">Usuario</span>
+            </a>
+        </li>
       </ul>
     </aside>
     <!-- Sidebar menu FINAL-->

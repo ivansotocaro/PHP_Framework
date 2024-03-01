@@ -1,11 +1,12 @@
 <?php
 
-include './Config/Config.php';
-include './Libraries/Core/Autoload.php';
+include_once './Config/Config.php';
+include_once './Libraries/Core/Autoload.php';
+include_once 'Controllers/ErrorsController.php';
 
-
-$url = !empty($_GET['url']) ? $_GET['url'] : 'home/index';
+$url = !empty($_GET['url']) ? $_GET['url'] : 'login/index';
 $url = rtrim($url, '/');
+$url = filter_var($url, FILTER_SANITIZE_URL);
 $arrUrl = explode("/", $url);
 
 $controller = $arrUrl[0] . "Controller";
@@ -28,26 +29,24 @@ if (isset($arrUrl[2])) {
 }
 
 
-$controllerfile = "Controllers/" . $controller . ".php";
+$controllerFile = "Controllers/" . $controller . ".php";
 
-if (file_exists($controllerfile)) {
+if (file_exists($controllerFile)) {
 
-  include $controllerfile;
+  include_once $controllerFile;
   $controller = new $controller();
 
   if (method_exists($controller, $method)) {
 
     $params != "" ? $controller->$method($params) : $controller->$method();
   } else {
-    include 'Controllers/ErrorsController.php';
-    $errors = new ErrorsController();   
+    $errors = new ErrorsController();
     $errors->index();
   }
 } else {
-  include 'Controllers/ErrorsController.php';
-  $errors = new ErrorsController();   
+  $errors = new ErrorsController();
   $errors->index();
-  
+
 }
 
 

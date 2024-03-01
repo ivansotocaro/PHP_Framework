@@ -1,16 +1,16 @@
 <?php
 
 //All controllers extend from Controller
-class HomeController extends Controller
+class LoginController extends Controller
 {
   public function __construct()
   {
     parent::__construct();
   }
 
-  public function index()
+  public function index($id)
   {
     $this->view->getView("index");
-   
+//      print_r($this->model->getUser());
   }
 }

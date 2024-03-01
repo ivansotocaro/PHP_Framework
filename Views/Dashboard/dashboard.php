@@ -1,3 +1,5 @@
+<?php include "Views/Dashboard/partials/header.php" ?>
+
 
     
     <main class="app-content">
@@ -19,4 +21,7 @@
         </div>
       </div>
     </main>
-   
+
+
+    
+<?php include "Views/Dashboard/partials/footer.php" ?>
