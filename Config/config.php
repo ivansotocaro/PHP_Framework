@@ -22,3 +22,8 @@ const PASS = "adminsoto";
 const DB = "sale";
 
 const charset = "charset=utf8";
+
+
+// JWT Configuratin 
+const JWT_SECRET_KEY = "kPEfSTpyYozxhn34gkeZVElNcupZH4hF";
+const JWT_HASH = 'HS256';

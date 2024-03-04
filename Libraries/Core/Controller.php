@@ -1,20 +1,25 @@
 <?php
 
+require_once 'Libraries/JwtManager.php';
+
 class Controller
 {
     /**
      * @var Model
      */
-    public $model;
+    protected $model;
     /**
      * @var Views
      */
-    public $view;
+    protected $view;
+
+    protected $jwtManager;
 
     public function __construct()
   {
     $this->view = new Views();
     $this->loadModel();
+    $this->jwtManager = new JwtManager();
   }
 
   public function loadModel()
